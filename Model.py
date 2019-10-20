@@ -127,7 +127,7 @@ scores = model.evaluate(X_test, test_y, verbose=0)
 print("CNN Error: %.2f%%"%(100-scores[1]*100))
 print_summary(model)
 
-model.save('ges_model.h5')
+model.save('emoji_model.h5')
 
 
 # In[ ]:
