@@ -118,25 +118,6 @@ def keras_model(image_x, image_y):
     cnn.compile(optimizer=opt, loss=loss, metrics=metrics)
     return cnn
     
-    '''
-    model.add(Conv2D(32, (5, 5), input_shape=(image_x, image_y, 1), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2), strides=(2,2), padding='same'))
-    model.add(Conv2D(64, (5,5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(5,5), strides=(5,5), padding='same'))
-    model.add(Flatten())
-    model.add(Dense(1024, activation = 'relu'))
-    model.add(Dropout(0.2))
-    model.add(Dense(noc, activation='softmax'))
-    
-    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-    filepath='ges_model.h5'
-    checkpoint1 = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
-    callbacks_list = [checkpoint1]
-    
-    return model, callbacks_list
-    '''
-
-
 # In[ ]:
 
 
